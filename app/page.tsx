@@ -1,5 +1,4 @@
 import { Pokemon } from "@/types/PokeTypes";
-import { useState } from "react";
 
 async function getPokemon() {
   const res = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=40`);
@@ -13,7 +12,7 @@ export default async function Home() {
   const data: Pokemon = await getPokemon();
   console.log(data);
   return (
-    <div className="bg-slate-200">
+    <div className="">
       <h3>{data.name}</h3>
     </div>
   );
