@@ -8,8 +8,9 @@ export default async function Pokemon() {
   return (
     <div className="min-w-full flex flex-col justify-center items-center gap-8 p-8">
       <h1 className="text-5xl uppercase font-black text-blue-400 text-center">
-        Pokemon Lists
+        米田 と ポケモン
       </h1>
+
       <div className="grid grid-cols-4 mx-auto gap-4 py-8 px-20">
         {results.map((pokemon) => (
           <Link
