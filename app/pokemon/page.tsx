@@ -7,14 +7,14 @@ export default async function Pokemon() {
   const results: Pokemon[] = data.results;
   return (
     <div className="flex min-w-full flex-col items-center justify-center gap-8 p-8">
-      <h1 className="text-center text-5xl font-black uppercase text-blue-400">
-        {/* 米田 と ポケモン */}Pokemon´ Viewer
+      <h1 className="text-center text-5xl font-black capitalize text-blue-400">
+        米田 と ポケモン <br /> <span>Pokemon´ Viewer</span>
       </h1>
 
-      <div className="mx-auto grid grid-cols-4 gap-4 px-20 py-8">
+      <div className="mx-auto grid grid-cols-2 gap-4 px-2 py-8 md:grid-cols-3 lg:grid-cols-4">
         {results.map((pokemon) => (
           <Link
-            className="rounded-md border-2 border-white bg-blue-400 px-8 py-3 text-center font-medium uppercase"
+            className="rounded-md border-2 border-white bg-blue-400 px-4 py-2 text-center font-medium uppercase text-slate-200"
             href={`/pokemon/${pokemon.name}`}
             key={pokemon.name}
           >

@@ -2,6 +2,7 @@ import getPokeName from "@/app/libs/getPokeName";
 import { PokemonDetail } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
+import { Progress } from "@/components/ui/progress";
 
 const colors = {
   grass: "bg-green-500",
@@ -90,10 +91,10 @@ export default async function PokemonName({
   }
 
   return (
-    <div className="flex min-w-full flex-col items-center justify-center gap-8 p-20">
-      <h1 className="text-5xl font-black text-blue-400">Pokemon Card</h1>
+    <div className="flex min-w-full flex-col items-center justify-center gap-8 px-4 py-8">
+      <h1 className="text-4xl font-black text-blue-400">Pokemon Card</h1>
       <div
-        className={`${colors[colorType]} flex min-w-[400px] flex-col rounded-xl p-8`}
+        className={`${colors[colorType]} flex w-full flex-col rounded-xl p-8 md:w-2/4 lg:w-2/6`}
       >
         <Image
           className="mx-auto"
@@ -103,21 +104,32 @@ export default async function PokemonName({
           alt={`${data.name} images`}
         />
         <div className="mb-2 flex flex-col gap-2">
-          <p className="text-2xl font-semibold">#{data.id}</p>
+          <p className="text-2xl font-semibold text-slate-900">#{data.id}</p>
           <p className="text-4xl font-bold capitalize text-white">
             {data.name}
           </p>
         </div>
         <div className="flex gap-4">
           {ability.map((item, index) => (
-            <p className="text-xl" key={index}>
+            <p className="text-xl text-slate-300" key={index}>
               {item.ability.name}
             </p>
           ))}
         </div>
+        <div>
+          {data.stats.map((item) => (
+            <div
+              className="flex flex-col items-start justify-between"
+              key={item.base_stat}
+            >
+              <p className="mt-2 text-slate-800">{item.stat.name}</p>
+              <Progress value={item.base_stat} className="h-4 w-full" />
+            </div>
+          ))}
+        </div>
       </div>
       <Link
-        className="rounded-lg bg-blue-400 px-4 py-2 uppercase hover:opacity-70"
+        className="rounded-lg bg-blue-400 px-4 py-2 uppercase text-slate-200 hover:opacity-70"
         href="/pokemon"
       >
         pokemon list
