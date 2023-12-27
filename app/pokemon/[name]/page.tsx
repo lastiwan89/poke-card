@@ -32,7 +32,7 @@ export default async function PokemonName({
   const data: PokemonDetail = await getPokeName(name);
   const ability = data.abilities;
   const type = data.types;
-  const colorType = type[0].type.name;
+  const colorType: string = type[0].type.name;
 
   if (colorType === "grass") {
     colors.grass;
@@ -90,20 +90,20 @@ export default async function PokemonName({
   }
 
   return (
-    <div className="min-w-full flex flex-col justify-center items-center gap-8 p-20">
+    <div className="flex min-w-full flex-col items-center justify-center gap-8 p-20">
       <h1 className="text-5xl font-black text-blue-400">Pokemon Card</h1>
       <div
-        className={`${colors[colorType]} flex flex-col rounded-xl p-8 min-w-[400px]`}
+        className={`${colors[colorType]} flex min-w-[400px] flex-col rounded-xl p-8`}
       >
         <Image
           className="mx-auto"
-          src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${data.id}.png`}
+          src={`${data.sprites.other["official-artwork"].front_shiny}`}
           width={200}
           height={200}
           alt={`${data.name} images`}
         />
-        <div className="flex flex-col gap-2 mb-2">
-          <p className="font-semibold text-2xl">#{data.id}</p>
+        <div className="mb-2 flex flex-col gap-2">
+          <p className="text-2xl font-semibold">#{data.id}</p>
           <p className="text-4xl font-bold capitalize text-white">
             {data.name}
           </p>
@@ -117,7 +117,7 @@ export default async function PokemonName({
         </div>
       </div>
       <Link
-        className="uppercase px-4 py-2 rounded-lg bg-blue-400 hover:opacity-70"
+        className="rounded-lg bg-blue-400 px-4 py-2 uppercase hover:opacity-70"
         href="/pokemon"
       >
         pokemon list
