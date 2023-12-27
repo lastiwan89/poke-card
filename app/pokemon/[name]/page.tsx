@@ -37,58 +37,58 @@ export default async function PokemonName({
 
   let bgColor;
   if (colorType === "grass") {
-    return (bgColor = colors.grass);
+    bgColor = colors.grass;
   }
   if (colorType === "fire") {
-    return (bgColor = colors.fire);
+    bgColor = colors.fire;
   }
   if (colorType === "poison") {
-    return (bgColor = colors.poison);
+    bgColor = colors.poison;
   }
   if (colorType === "flying") {
-    return (bgColor = colors.flying);
+    bgColor = colors.flying;
   }
   if (colorType === "water") {
-    return (bgColor = colors.water);
+    bgColor = colors.water;
   }
   if (colorType === "bug") {
-    return (bgColor = colors.bug);
+    bgColor = colors.bug;
   }
   if (colorType === "normal") {
-    return (bgColor = colors.normal);
+    bgColor = colors.normal;
   }
   if (colorType === "electric") {
-    return (bgColor = colors.electric);
+    bgColor = colors.electric;
   }
   if (colorType === "ground") {
-    return (bgColor = colors.ground);
+    bgColor = colors.ground;
   }
   if (colorType === "fairy") {
-    return (bgColor = colors.fairy);
+    bgColor = colors.fairy;
   }
   if (colorType === "ghost") {
-    return (bgColor = colors.ghost);
+    bgColor = colors.ghost;
   }
   if (colorType === "psychic") {
-    return (bgColor = colors.psychic);
+    bgColor = colors.psychic;
   }
   if (colorType === "steel") {
-    return (bgColor = colors.steel);
+    bgColor = colors.steel;
   }
   if (colorType === "dark") {
-    return (bgColor = colors.dark);
+    bgColor = colors.dark;
   }
   if (colorType === "fighting") {
-    return (bgColor = colors.fighting);
+    bgColor = colors.fighting;
   }
   if (colorType === "ice") {
-    return (bgColor = colors.ice);
+    bgColor = colors.ice;
   }
   if (colorType === "rock") {
-    return (bgColor = colors.rock);
+    bgColor = colors.rock;
   }
   if (colorType === "dragon") {
-    return (bgColor = colors.dragon);
+    bgColor = colors.dragon;
   }
 
   return (
