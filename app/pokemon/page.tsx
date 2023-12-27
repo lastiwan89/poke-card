@@ -8,7 +8,7 @@ export default async function Pokemon() {
   return (
     <div className="flex min-w-full flex-col items-center justify-center gap-8 p-8">
       <h1 className="text-center text-5xl font-black capitalize text-blue-400">
-        米田 と ポケモン <br /> <span>Pokemon´ Viewer</span>
+        米田 と ポケモン <br /> <span>松本　守倫</span>
       </h1>
 
       <div className="mx-auto grid grid-cols-2 gap-4 px-2 py-8 md:grid-cols-3 lg:grid-cols-4">
