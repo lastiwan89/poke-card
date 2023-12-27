@@ -33,68 +33,69 @@ export default async function PokemonName({
   const data: PokemonDetail = await getPokeName(name);
   const ability = data.abilities;
   const type = data.types;
-  const colorType: string = type[0].type.name;
+  const colorType = type[0].type.name;
 
+  let bgColor;
   if (colorType === "grass") {
-    colors.grass;
+    return (bgColor = colors.grass);
   }
   if (colorType === "fire") {
-    colors.fire;
+    return (bgColor = colors.fire);
   }
   if (colorType === "poison") {
-    colors.poison;
+    return (bgColor = colors.poison);
   }
   if (colorType === "flying") {
-    colors.flying;
+    return (bgColor = colors.flying);
   }
   if (colorType === "water") {
-    colors.water;
+    return (bgColor = colors.water);
   }
   if (colorType === "bug") {
-    colors.bug;
+    return (bgColor = colors.bug);
   }
   if (colorType === "normal") {
-    colors.normal;
+    return (bgColor = colors.normal);
   }
   if (colorType === "electric") {
-    colors.electric;
+    return (bgColor = colors.electric);
   }
   if (colorType === "ground") {
-    colors.ground;
+    return (bgColor = colors.ground);
   }
   if (colorType === "fairy") {
-    colors.fairy;
+    return (bgColor = colors.fairy);
   }
   if (colorType === "ghost") {
-    colors.ghost;
+    return (bgColor = colors.ghost);
   }
   if (colorType === "psychic") {
-    colors.psychic;
+    return (bgColor = colors.psychic);
   }
   if (colorType === "steel") {
-    colors.steel;
+    return (bgColor = colors.steel);
   }
   if (colorType === "dark") {
-    colors.dark;
+    return (bgColor = colors.dark);
   }
   if (colorType === "fighting") {
-    colors.fighting;
+    return (bgColor = colors.fighting);
   }
   if (colorType === "ice") {
-    colors.ice;
+    return (bgColor = colors.ice);
   }
   if (colorType === "rock") {
-    colors.rock;
+    return (bgColor = colors.rock);
   }
   if (colorType === "dragon") {
-    colors.dragon;
+    return (bgColor = colors.dragon);
   }
 
   return (
     <div className="flex min-w-full flex-col items-center justify-center gap-8 px-4 py-8">
       <h1 className="text-4xl font-black text-blue-400">Pokemon Card</h1>
       <div
-        className={`${colors[colorType]} flex w-full flex-col rounded-xl p-8 md:w-2/4 lg:w-2/6`}
+        className={`${bgColor} flex w-full flex-col rounded-xl p-8 md:w-2/4 lg:w-2/6`}
       >
         <Image
           className="mx-auto"
@@ -137,5 +138,3 @@ export default async function PokemonName({
     </div>
   );
 }
-
-// https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${data.id}.png
