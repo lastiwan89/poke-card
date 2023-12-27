@@ -7,7 +7,7 @@ export default async function Pokemon() {
   const results: Pokemon[] = data.results;
   return (
     <div className="flex min-w-full flex-col items-center justify-center gap-8 p-8">
-      <h1 className="text-center text-5xl font-black capitalize text-blue-400">
+      <h1 className="text-center text-3xl font-black capitalize text-blue-400">
         <span>Pokemon Finder</span>
       </h1>
 
